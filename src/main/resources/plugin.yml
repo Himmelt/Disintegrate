@@ -1,0 +1,19 @@
+name: Resolver
+version: 1.7.10-0.0.1
+author: Himmelt
+main: org.soraworld.resolve.Resolver
+depend: [Violet]
+softdepend: []
+website: https://github.com/Himmelt/Resolver
+description: Resolver Plugin.
+
+commands:
+  resolve:
+    aliases: [rsl]
+    description: "Resolver - https://github.com/Himmelt/Resolver"
+    usage: "/resolve ..."
+permissions:
+  resolve.use:
+    default: false
+  resolve.admin:
+    default: op

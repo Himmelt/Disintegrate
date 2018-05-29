@@ -1,0 +1,11 @@
+# 中文语言文件(Chinese Language File)
+# 请使用 UTF-8 编码
+
+chatHead: "[装备分解] "
+title: "&6&l装备分解台"
+resolveSuccess: "装备已成功分解."
+emptyOrCantResolve: "分解槽为空，或物品无法分解."
+emptyHand: "手持物品为空，请先拿着待编辑的物品."
+setIdSuccess: "已设置当前物品分解id为 %s ."
+hint: "把要分解的物品放置在中间."
+click: "点击分解"

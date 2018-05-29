@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+group = 'org.soraworld.resolve'
+version = '1.7.10-0.0.1'
+archivesBaseName = "Resolver"
+
+sourceCompatibility = targetCompatibility = 1.8
+compileJava {
+    sourceCompatibility = targetCompatibility = 1.8
+}
+
+dependencies {
+    compile files('lib/spigot-1.7.10.jar')
+    compile files('lib/Violet-1.7.10-1.1.7.jar')
+}

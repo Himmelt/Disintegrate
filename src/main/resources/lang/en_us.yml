@@ -1,0 +1,11 @@
+# English Language File
+# Please keep UTF-8 encoding
+
+chatHead: "[Resolver] "
+title: "&6&lResolver"
+resolveSuccess: "resolved successfully."
+emptyOrCantResolve: "resolve slot is empty or cant be resolved."
+emptyHand: "no items in your hand."
+setIdSuccess: "set resolve id to %s ."
+hint: "put item in the center slot."
+click: "Click to Resolve"
