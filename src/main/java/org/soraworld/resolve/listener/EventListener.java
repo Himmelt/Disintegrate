@@ -33,8 +33,9 @@ public class EventListener implements Listener {
         Inventory inv = event.getInventory();
         if (event.getPlayer() instanceof Player) {
             Player player = (Player) event.getPlayer();
-            if (config.getResolver(player) == inv && inv.getItem(13) != null) {
+            if (inv != null && inv.equals(config.getResolver(player)) && inv.getItem(13) != null) {
                 player.getInventory().addItem(inv.getItem(13));
+                inv.setItem(13, null);
             }
         }
     }
