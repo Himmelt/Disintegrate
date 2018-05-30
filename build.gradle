@@ -1,7 +1,7 @@
 apply plugin: 'java'
 
 group = 'org.soraworld.resolve'
-version = '1.7.10-0.0.1'
+version = '1.7.10-0.0.3'
 archivesBaseName = "Resolver"
 
 sourceCompatibility = targetCompatibility = 1.8

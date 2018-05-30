@@ -1,5 +1,5 @@
 name: Resolver
-version: 1.7.10-0.0.1
+version: 1.7.10-0.0.3
 author: Himmelt
 main: org.soraworld.resolve.Resolver
 depend: [Violet]

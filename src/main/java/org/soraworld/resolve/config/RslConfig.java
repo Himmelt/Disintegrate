@@ -92,13 +92,16 @@ public class RslConfig extends IIConfig {
         return inv;
     }
 
-    private void resolve(Player player, String id) {
+    private boolean resolve(Player player, String id, int amount) {
         List<String> cmds = outputs.get(id);
         if (cmds != null && !cmds.isEmpty()) {
-            for (String cmd : cmds) {
-                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd.replace("{player}", player.getName()));
+            for (int i = 0; i < amount; i++) {
+                for (String cmd : cmds) {
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd.replace("{player}", player.getName()));
+                }
             }
         }
+        return outputs.containsKey(id);
     }
 
     public void checkClick(Player player, int slot) {
@@ -108,10 +111,11 @@ public class RslConfig extends IIConfig {
             if (item != null) {
                 NBTTagCompound nbt = asNMSCopy(item).tag;
                 if (nbt != null && nbt.hasKeyOfType("resolve_id", 8)) {
-                    resolve(player, nbt.getString("resolve_id"));
-                    inv.setItem(13, null);
-                    send(player, "resolveSuccess");
-                    return;
+                    if (resolve(player, nbt.getString("resolve_id"), item.getAmount())) {
+                        inv.setItem(13, null);
+                        send(player, "resolveSuccess");
+                        return;
+                    }
                 }
             }
             send(player, "emptyOrCantResolve");
