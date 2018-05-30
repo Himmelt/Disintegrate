@@ -14,6 +14,6 @@ commands:
     usage: "/resolve ..."
 permissions:
   resolve.use:
-    default: false
+    default: op
   resolve.admin:
     default: op
